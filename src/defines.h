@@ -26,14 +26,15 @@
 // ================================================
 
 // Set parameters of IMU and board used
+
 #ifndef IMU
-#define IMU IMU_AUTO
+#define IMU IMU_BNO055
 #endif
 #ifndef SECOND_IMU
 #define SECOND_IMU IMU_AUTO
 #endif
 #ifndef BOARD
-#define BOARD BOARD_SLIMEVR_V1_2
+#define BOARD BOARD_ESP32S3_SUPERMINI
 #endif
 #ifndef IMU_ROTATION
 #define IMU_ROTATION DEG_270
@@ -51,7 +52,7 @@
 
 // Set I2C address here or directly in IMU_DESC_ENTRY for each IMU used
 // If not set, default address is used based on the IMU and Sensor ID
-// #define PRIMARY_IMU_ADDRESS_ONE 0x4a
+#define PRIMARY_IMU_ADDRESS_ONE 0x29
 // #define SECONDARY_IMU_ADDRESS_TWO 0x4b
 
 #ifndef BATTERY_MONITOR
@@ -64,15 +65,15 @@
 
 // --- OVERRIDES FOR DEFAULT PINS
 
-// #define PIN_IMU_SDA 14
-// #define PIN_IMU_SCL 12
+#define PIN_IMU_SDA 8
+#define PIN_IMU_SCL 9
 // #define PIN_IMU_INT 16
 // #define PIN_IMU_INT_2 13
 // #define PIN_BATTERY_LEVEL 17
 // #define LED_PIN 2
 // #define LED_INVERTED true
-// #define BATTERY_SHIELD_RESISTANCE 0
-// #define BATTERY_SHIELD_R1 10
-// #define BATTERY_SHIELD_R2 40.2
+#define BATTERY_SHIELD_RESISTANCE 220
+#define BATTERY_SHIELD_R1 220
+#define BATTERY_SHIELD_R2 220
 
 // ------------------------------
